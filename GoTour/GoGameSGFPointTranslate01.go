@@ -113,5 +113,8 @@ func testMethods03() {
 
 	fmt.Println()
 	fmt.Println("GitHub Go! ")
+	
+	fmt.Println()
+	fmt.Println("IntelliJ Go! ")
 
 }
