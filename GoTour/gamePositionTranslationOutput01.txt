@@ -1,0 +1,147 @@
+GOROOT=/Users/[...]/sdk/go1.15beta1 #gosetup
+GOPATH=/Users/[...]___go_build_gamePositionTranslation01_go
+
+**** Methods03:
+
+ALL val gameRunSlceIN[0]:  {a z 0 25} 
+ALL val gameRunSlceIN[1]:  {b y 1 24} 
+ALL val gameRunSlceIN[2]:  {c x 2 23} 
+ALL val gameRunSlceIN[3]:  {d w 3 22} 
+ALL val gameRunSlceIN[4]:  {e v 4 21} 
+ALL val gameRunSlceIN[5]:  {f u 5 20} 
+ALL val gameRunSlceIN[6]:  {g t 6 19} 
+ALL val gameRunSlceIN[7]:  {h s 7 18} 
+ALL val gameRunSlceIN[8]:  {i r 8 17} 
+ALL val gameRunSlceIN[9]:  {j q 9 16} 
+ALL val gameRunSlceIN[10]:  {k p 10 15} 
+ALL val gameRunSlceIN[11]:  {l o 11 14} 
+ALL val gameRunSlceIN[12]:  {m n 12 13} 
+ALL val gameRunSlceIN[13]:  {n m 13 12} 
+ALL val gameRunSlceIN[14]:  {o l 14 11} 
+ALL val gameRunSlceIN[15]:  {p k 15 10} 
+ALL val gameRunSlceIN[16]:  {q j 16 9} 
+ALL val gameRunSlceIN[17]:  {r i 17 8} 
+ALL val gameRunSlceIN[18]:  {s h 18 7} 
+ALL val gameRunSlceIN[19]:  {t g 19 6} 
+ALL val gameRunSlceIN[20]:  {u f 20 5} 
+ALL val gameRunSlceIN[21]:  {v e 21 4} 
+ALL val gameRunSlceIN[22]:  {w d 22 3} 
+ALL val gameRunSlceIN[23]:  {x c 23 2} 
+ALL val gameRunSlceIN[24]:  {y b 24 1} 
+ALL val gameRunSlceIN[25]:  {z a 25 0} 
+
+stonLtrTOIntTrns:  {4 21}
+
+stonIntTOLtrTrns:  {r i}
+
+LTR val gameRunSlceIN[0]:  {a z} 
+LTR val gameRunSlceIN[1]:  {b y} 
+LTR val gameRunSlceIN[2]:  {c x} 
+LTR val gameRunSlceIN[3]:  {d w} 
+LTR val gameRunSlceIN[4]:  {e v} 
+LTR val gameRunSlceIN[5]:  {f u} 
+LTR val gameRunSlceIN[6]:  {g t} 
+LTR val gameRunSlceIN[7]:  {h s} 
+LTR val gameRunSlceIN[8]:  {i r} 
+LTR val gameRunSlceIN[9]:  {j q} 
+LTR val gameRunSlceIN[10]:  {k p} 
+LTR val gameRunSlceIN[11]:  {l o} 
+LTR val gameRunSlceIN[12]:  {m n} 
+LTR val gameRunSlceIN[13]:  {n m} 
+LTR val gameRunSlceIN[14]:  {o l} 
+LTR val gameRunSlceIN[15]:  {p k} 
+LTR val gameRunSlceIN[16]:  {q j} 
+LTR val gameRunSlceIN[17]:  {r i} 
+LTR val gameRunSlceIN[18]:  {s h} 
+LTR val gameRunSlceIN[19]:  {t g} 
+LTR val gameRunSlceIN[20]:  {u f} 
+LTR val gameRunSlceIN[21]:  {v e} 
+LTR val gameRunSlceIN[22]:  {w d} 
+LTR val gameRunSlceIN[23]:  {x c} 
+LTR val gameRunSlceIN[24]:  {y b} 
+LTR val gameRunSlceIN[25]:  {z a} 
+
+INT val gameRunSlceIN[0]:  {0 25} 
+INT val gameRunSlceIN[1]:  {1 24} 
+INT val gameRunSlceIN[2]:  {2 23} 
+INT val gameRunSlceIN[3]:  {3 22} 
+INT val gameRunSlceIN[4]:  {4 21} 
+INT val gameRunSlceIN[5]:  {5 20} 
+INT val gameRunSlceIN[6]:  {6 19} 
+INT val gameRunSlceIN[7]:  {7 18} 
+INT val gameRunSlceIN[8]:  {8 17} 
+INT val gameRunSlceIN[9]:  {9 16} 
+INT val gameRunSlceIN[10]:  {10 15} 
+INT val gameRunSlceIN[11]:  {11 14} 
+INT val gameRunSlceIN[12]:  {12 13} 
+INT val gameRunSlceIN[13]:  {13 12} 
+INT val gameRunSlceIN[14]:  {14 11} 
+INT val gameRunSlceIN[15]:  {15 10} 
+INT val gameRunSlceIN[16]:  {16 9} 
+INT val gameRunSlceIN[17]:  {17 8} 
+INT val gameRunSlceIN[18]:  {18 7} 
+INT val gameRunSlceIN[19]:  {19 6} 
+INT val gameRunSlceIN[20]:  {20 5} 
+INT val gameRunSlceIN[21]:  {21 4} 
+INT val gameRunSlceIN[22]:  {22 3} 
+INT val gameRunSlceIN[23]:  {23 2} 
+INT val gameRunSlceIN[24]:  {24 1} 
+INT val gameRunSlceIN[25]:  {25 0} 
+
+INT val gameRunSlceIN[0]:  {0 25} 
+INT val gameRunSlceIN[1]:  {1 24} 
+INT val gameRunSlceIN[2]:  {2 23} 
+INT val gameRunSlceIN[3]:  {3 22} 
+INT val gameRunSlceIN[4]:  {4 21} 
+INT val gameRunSlceIN[5]:  {5 20} 
+INT val gameRunSlceIN[6]:  {6 19} 
+INT val gameRunSlceIN[7]:  {7 18} 
+INT val gameRunSlceIN[8]:  {8 17} 
+INT val gameRunSlceIN[9]:  {9 16} 
+INT val gameRunSlceIN[10]:  {10 15} 
+INT val gameRunSlceIN[11]:  {11 14} 
+INT val gameRunSlceIN[12]:  {12 13} 
+INT val gameRunSlceIN[13]:  {13 12} 
+INT val gameRunSlceIN[14]:  {14 11} 
+INT val gameRunSlceIN[15]:  {15 10} 
+INT val gameRunSlceIN[16]:  {16 9} 
+INT val gameRunSlceIN[17]:  {17 8} 
+INT val gameRunSlceIN[18]:  {18 7} 
+INT val gameRunSlceIN[19]:  {19 6} 
+INT val gameRunSlceIN[20]:  {20 5} 
+INT val gameRunSlceIN[21]:  {21 4} 
+INT val gameRunSlceIN[22]:  {22 3} 
+INT val gameRunSlceIN[23]:  {23 2} 
+INT val gameRunSlceIN[24]:  {24 1} 
+INT val gameRunSlceIN[25]:  {25 0} 
+
+LTR val gameRunSlceIN[0]:  {a z} 
+LTR val gameRunSlceIN[1]:  {b y} 
+LTR val gameRunSlceIN[2]:  {c x} 
+LTR val gameRunSlceIN[3]:  {d w} 
+LTR val gameRunSlceIN[4]:  {e v} 
+LTR val gameRunSlceIN[5]:  {f u} 
+LTR val gameRunSlceIN[6]:  {g t} 
+LTR val gameRunSlceIN[7]:  {h s} 
+LTR val gameRunSlceIN[8]:  {i r} 
+LTR val gameRunSlceIN[9]:  {j q} 
+LTR val gameRunSlceIN[10]:  {k p} 
+LTR val gameRunSlceIN[11]:  {l o} 
+LTR val gameRunSlceIN[12]:  {m n} 
+LTR val gameRunSlceIN[13]:  {n m} 
+LTR val gameRunSlceIN[14]:  {o l} 
+LTR val gameRunSlceIN[15]:  {p k} 
+LTR val gameRunSlceIN[16]:  {q j} 
+LTR val gameRunSlceIN[17]:  {r i} 
+LTR val gameRunSlceIN[18]:  {s h} 
+LTR val gameRunSlceIN[19]:  {t g} 
+LTR val gameRunSlceIN[20]:  {u f} 
+LTR val gameRunSlceIN[21]:  {v e} 
+LTR val gameRunSlceIN[22]:  {w d} 
+LTR val gameRunSlceIN[23]:  {x c} 
+LTR val gameRunSlceIN[24]:  {y b} 
+LTR val gameRunSlceIN[25]:  {z a} 
+
+Go Otrego! 
+
+Process finished with exit code 0

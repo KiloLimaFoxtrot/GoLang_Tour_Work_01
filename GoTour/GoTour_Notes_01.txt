@@ -1,0 +1,57 @@
+
+- methods01.go
+1. GoLang Methods are sort of like the GoLang version of Objects, which
+in Java terms have both state and behavior, ie states / field values
+that can be both get and set, and behavior / methods that can be called
+on the object
+
+- Exercise04 Fibonacci Closures exercise04_Fibonacci_Closure.go
+1. The func fibonacci01() and func fibonacci02() my test reference
+solution examples found below
+1. https://github.com/golang/tour/blob/master/solutions/fib.go
+2. https://www.geeksforgeeks
+.org/print-fibonacci-sequence-using-2-variables/
+
+- Function that receives both
+1. arguments from another function
+"fn03 func(float64, float64) float64"
+    [func name] [func and its parameters    [the return data type]
+    "fn03       func(float64, float64)      float64"
+
+2. values to plug into the arguments
+"x float64, y float64"
+    - functionValues02.go file
+
+All together that is...
+"func compute03(/*arguments->*/fn03 func(float64, float64) float64,
+/*values->*/ x float64, y float64) {
+
+	fmt.Println(fn03(x, y))
+
+}"
+
+-Time functions:
+    switchStatement.go file, from the Switch evaluation page of the
+    GoTour
+
+-Dynamically sized Arrays/Slices and
+-2D Arrays/Slices work
+-tic tac toe game
+-make() function
+    in the file slices02.go, with the functions slices06() and slices07
+    ()
+
+-exercise02_Slices.go
+    the 2D array build in the function Pic() syntax reference...
+    // syntax reference: //https://stackoverflow
+    .com/questions/57482282/multi-dimensional-arrays-in-go
+
+/*
+	Note: Time in the Go playground always seems to start at
+	2009-11-10 23:00:00 UTC,
+	a value whose significance is left as an exercise for the
+	reader..
+
+    switchStatement.go file, from the Switch evaluation page of the
+    GoTour
+*/
