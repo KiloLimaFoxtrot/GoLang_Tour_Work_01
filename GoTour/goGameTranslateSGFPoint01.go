@@ -4,7 +4,7 @@ package main
 // 	"fmt"
 // )
 //
-// type gamePointStrct04 struct {
+// type pointStrct02 struct {
 // 	x, y int
 // }
 //
@@ -47,27 +47,27 @@ package main
 // 	*/
 //
 // 	// Test of 1。 func translateToSGF(pt Point) string { .... }
-// 	intPoint01 := gamePointStrct04{
+// 	intPoint01 := pointStrct02{
 // 		x: 16,
 // 		y: 23,
 // 	}
 //
-// 	intPoint02 := gamePointStrct04{
+// 	intPoint02 := pointStrct02{
 // 		x: 0,
 // 		y: 1,
 // 	}
 // 	fmt.Println()
-// 	fmt.Println("ttSGF01 intPoint01", transPointToSGF04(intPoint01))
+// 	fmt.Println("ttSGF01 intPoint01", pointToSGF02(intPoint01))
 // 	fmt.Println()
-// 	fmt.Println("ttSGF01 intPoint01", transPointToSGF04(intPoint02))
+// 	fmt.Println("ttSGF01 intPoint01", pointToSGF02(intPoint02))
 //
 // 	// Test of 2。 func translateToPoint02(sgfPt string) Point {}
 // 	sgfPoint01 := "ab"
 // 	sgfPoint02 := "qx"
 // 	fmt.Println()
-// 	fmt.Println("ttp01 sgfPoint01: ", transSGFToPoint04(sgfPoint01))
+// 	fmt.Println("ttp01 sgfPoint01: ", sGFToPoint02(sgfPoint01))
 // 	fmt.Println()
-// 	fmt.Println("ttp01 sgfPoint02: ", transSGFToPoint04(sgfPoint02))
+// 	fmt.Println("ttp01 sgfPoint02: ", sGFToPoint02(sgfPoint02))
 //
 // 	// To test the alternate of above that accepts an sgf string point
 // 	// with a comma between the characters
@@ -79,16 +79,16 @@ package main
 // 	// fmt.Println("ttp01 sgfPoint02: ", translateToPoint02(sgfPoint04))
 //
 // }
-// func transPointToSGF04(ptIN gamePointStrct04) string {
+// func pointToSGF02(ptIN pointStrct02) string {
 // 	sgfPtX := string(rune((ptIN.x) + 97))
 // 	sgfPtY := string(rune((ptIN.y) + 97))
 // 	return sgfPtX + sgfPtY
 // }
 //
-// func transSGFToPoint04(sgfPt string) gamePointStrct04 {
+// func sGFToPoint02(sgfPt string) pointStrct02 {
 // 	sgfPtX := sgfPt[0]
 // 	sgfPtY := sgfPt[1]
-// 	return gamePointStrct04{
+// 	return pointStrct02{
 // 		x: int(sgfPtX) - 97,
 // 		y: int(sgfPtY) - 97,
 // 	}
@@ -96,19 +96,19 @@ package main
 //
 // // Alternate of above that accepts an sgf string point with a comma
 // // between the characters
-// // func translateToPoint02(sgfPt string) gamePointStrct04 {
+// // func translateToPoint02(sgfPt string) pointStrct02 {
 // // 	sgfPtX := sgfPt[0]
 // // 	sgfPtY := sgfPt[2]
-// // 	return gamePointStrct04{
+// // 	return pointStrct02{
 // // 		x: int(sgfPtX) - 97,
 // // 		y: int(sgfPtY) - 97,
 // // 	}
 // // }
 //
 // // ??to split the string on the comma??
-// // func translateToPoint02(sgfPt string) gamePointStrct04 {
+// // func translateToPoint02(sgfPt string) pointStrct02 {
 // // 	sgfPtSplit := strings.Split(sgfPt, ",")
-// // 	return gamePointStrct04{
+// // 	return pointStrct02{
 // // 		x: int(sgfPtSplit[0]) - 97,
 // // 		y: int(sgfPtY) - 97,
 // // 	}
