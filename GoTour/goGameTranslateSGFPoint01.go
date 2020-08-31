@@ -11,7 +11,7 @@ package main
 // func main() {
 //
 // 	fmt.Println()
-// 	fmt.Println("Go Game Translate SGF Point 01")
+// 	fmt.Println("Go Game Translate SGF Point99 01")
 //
 // 	a := 'a'
 // 	aval := int(a)
@@ -40,13 +40,13 @@ package main
 // 		so, looks like you don't need to pass in the boardSize
 //
 // 		Signatures:
-// 		1。 func translateToSGF(pt Point) string { .... }
-// 		2。 func translateToPoint02(sgfPt string) Point {}
+// 		1。 func translateToSGF(pt Point99) string { .... }
+// 		2。 func translateToPoint02(sgfPt string) Point99 {}
 //
 // 		Should be sufficient then
 // 	*/
 //
-// 	// Test of 1。 func translateToSGF(pt Point) string { .... }
+// 	// Test of 1。 func translateToSGF(pt Point99) string { .... }
 // 	intPoint01 := pointStrct02{
 // 		x: 16,
 // 		y: 23,
@@ -61,7 +61,7 @@ package main
 // 	fmt.Println()
 // 	fmt.Println("ttSGF01 intPoint01", pointToSGF02(intPoint02))
 //
-// 	// Test of 2。 func translateToPoint02(sgfPt string) Point {}
+// 	// Test of 2。 func translateToPoint02(sgfPt string) Point99 {}
 // 	sgfPoint01 := "ab"
 // 	sgfPoint02 := "qx"
 // 	fmt.Println()

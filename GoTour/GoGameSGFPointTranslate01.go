@@ -23,10 +23,10 @@ type intPointStrct01 struct {
 func main() {
 
 	fmt.Println()
-	fmt.Println("Go Game Translate SGF Point 01")
+	fmt.Println("Go Game Translate SGF Point99 01")
 	/*Signatures:
-	1。 func translateToSGF(pt Point) string { .... }
-	2。 func translateToPoint02(sgfPt string) Point {}
+	1。 func translateToSGF(pt Point99) string { .... }
+	2。 func translateToPoint02(sgfPt string) Point99 {}
 	*/
 	fmt.Println()
 	// Tester Method
@@ -34,7 +34,7 @@ func main() {
 }
 
 /*
-### Point to SGF Method
+### Point99 to SGF Method
 */
 // If game point format is x-axis string, y-axis int
 func transPointToSGF03(ptIN sgfPointStrct01) string {
@@ -51,7 +51,7 @@ func transPointToSGF04(ptIN intPointStrct01) string {
 }
 
 /*
-### SGF to Point
+### SGF to Point99
 */
 // If game point format is x-axis string, y-axis int
 func transSGFToPoint03(sgfPt string) sgfPointStrct01 {
@@ -100,12 +100,12 @@ func testMethods03() {
 	// Test if game point format is x-axis string, y-axis int
 	sgfPoint03 := "qx"
 	fmt.Println()
-	fmt.Printf("trnsSGFToPoint03 sgfPoint03: %v, to Point: %v\n",
+	fmt.Printf("trnsSGFToPoint03 sgfPoint03: %v, to Point99: %v\n",
 		sgfPoint03, transSGFToPoint03(sgfPoint03))
 
 	// Test if game point format is x-axis int, y-axis int
 	fmt.Println()
-	fmt.Printf("trnsSGFToPoint04 sgfPoint03: %v, to Point: %v\n",
+	fmt.Printf("trnsSGFToPoint04 sgfPoint03: %v, to Point99: %v\n",
 		sgfPoint03, transSGFToPoint04(sgfPoint03))
 
 	fmt.Println()

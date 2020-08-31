@@ -8,14 +8,13 @@ type pointIntStrct01 struct {
 	x, y int
 }
 
-
 func main() {
-	
+
 	fmt.Println()
-	fmt.Println("Go Game Translate SGF Point 01")
+	fmt.Println("Go Game Translate SGF Point99 01")
 	/*Signatures:
-	1。 func translateToSGF(pt Point) string { .... }
-	2。 func translateToPoint02(sgfPt string) Point {}
+	1。 func translateToSGF(pt Point99) string { .... }
+	2。 func translateToPoint02(sgfPt string) Point99 {}
 	*/
 	fmt.Println()
 	// Tester Method
@@ -42,13 +41,13 @@ Tester Method
 */
 func testMethods() {
 	fmt.Println("Results: ")
-	
-	// Test of 1。 func translateToSGF(pt Point) string { .... }
+
+	// Test of 1。 func translateToSGF(pt Point99) string { .... }
 	intPoint01 := pointIntStrct01{
 		x: 16,
 		y: 23,
 	}
-	
+
 	intPoint02 := pointIntStrct01{
 		x: 0,
 		y: 1,
@@ -56,12 +55,12 @@ func testMethods() {
 	fmt.Println()
 	fmt.Println("ttSGF01 intPoint01", translateToSGF01(intPoint01))
 	fmt.Println("ttSGF01 intPoint01", translateToSGF01(intPoint02))
-	
-	// Test of 2。 func translateToPoint02(sgfPt string) Point {}
+
+	// Test of 2。 func translateToPoint02(sgfPt string) Point99 {}
 	sgfPoint01 := "a,b"
 	sgfPoint02 := "q,x"
 	fmt.Println()
 	fmt.Println("ttp01 sgfPoint01: ", translateToPoint01(sgfPoint01))
 	fmt.Println("ttp01 sgfPoint02: ", translateToPoint01(sgfPoint02))
-	
+
 }

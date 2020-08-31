@@ -13,18 +13,18 @@ type gamePointStrct02 struct {
 	y int
 }
 
-type sgfPointStruct struct {
-	// y-axis, x-axis
-	xColVal, yRowVal string
-}
+// type sgfPointStruct struct {
+// 	// y-axis, x-axis
+// 	xColVal, yRowVal string
+// }
 
 func main() {
-	
+
 	fmt.Println()
-	fmt.Println("Go Game Translate SGF Point 01")
+	fmt.Println("Go Game Translate SGF Point99 01")
 	/*Signatures:
-	1。 func translateToSGF(pt Point) string { .... }
-	2。 func translateToPoint02(sgfPt string) Point {}
+	1。 func translateToSGF(pt Point99) string { .... }
+	2。 func translateToPoint02(sgfPt string) Point99 {}
 	*/
 	fmt.Println()
 	// Tester Method
@@ -32,7 +32,7 @@ func main() {
 }
 
 /*
-### Point to SGF
+### Point99 to SGF
 */
 func transPointToSGF01(ptIN gamePointStrct01) string {
 	sgfPtX := string(rune((ptIN.x) + 97))
@@ -47,7 +47,7 @@ func transPointToSGF02(ptIN gamePointStrct02) string {
 }
 
 /*
-### SGF to Point
+### SGF to Point99
 */
 func transSGFToPoint01(sgfPt string) gamePointStrct01 {
 	sgfPtX := sgfPt[0]
@@ -73,7 +73,7 @@ Tester Method
 */
 func testMethods02() {
 	fmt.Println("Results: ")
-	
+
 	// **Test of mixed int string point structs
 	gamePoint01 := gamePointStrct02{
 		x: "q",
@@ -82,19 +82,19 @@ func testMethods02() {
 	fmt.Println()
 	fmt.Println("trnsPntToSGF02 gamePoint01",
 		transPointToSGF02(gamePoint01))
-	
+
 	sgfPoint03 := "qx"
 	fmt.Println()
 	fmt.Println("trnsSGFToPoint02 sgfPoint01",
 		transSGFToPoint02(sgfPoint03))
-	
+
 	// **Test of non-mixed int string point structs
-	// Test of 1。 func translateToSGF(pt Point) string { .... }
+	// Test of 1。 func translateToSGF(pt Point99) string { .... }
 	intPoint01 := gamePointStrct01{
 		x: 16,
 		y: 23,
 	}
-	
+
 	intPoint02 := gamePointStrct01{
 		x: 0,
 		y: 1,
@@ -102,12 +102,12 @@ func testMethods02() {
 	fmt.Println()
 	fmt.Println("ttSGF01 intPoint01", transPointToSGF01(intPoint01))
 	fmt.Println("ttSGF01 intPoint01", transPointToSGF01(intPoint02))
-	
-	// Test of 2。 func translateToPoint02(sgfPt string) Point {}
+
+	// Test of 2。 func translateToPoint02(sgfPt string) Point99 {}
 	sgfPoint01 := "a,b"
 	sgfPoint02 := "q,x"
 	fmt.Println()
 	fmt.Println("ttp01 sgfPoint01: ", transSGFToPoint01(sgfPoint01))
 	fmt.Println("ttp01 sgfPoint02: ", transSGFToPoint01(sgfPoint02))
-	
+
 }
