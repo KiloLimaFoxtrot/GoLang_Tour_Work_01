@@ -9,8 +9,6 @@ import (
 
 // for testing..
 func main() {
-	fmt.Println()
-	fmt.Println()
 
 	// p01X := X(p01)
 	// p01Y := Y(p01)

@@ -5,13 +5,13 @@ import (
 )
 
 // Game point format is x-axis string, y-axis int
-type gamePointStrct03 struct {
+type sgfPointStrct01 struct {
 	x string
 	y int
 }
 
 // Or, if the game point format is x-axis int, y-axis int
-type gamePointStrct04 struct {
+type intPointStrct01 struct {
 	x, y int
 }
 
@@ -37,14 +37,14 @@ func main() {
 ### Point to SGF Method
 */
 // If game point format is x-axis string, y-axis int
-func transPointToSGF03(ptIN gamePointStrct03) string {
+func transPointToSGF03(ptIN sgfPointStrct01) string {
 	sgfPtY := string(rune((ptIN.y) + 97))
 	// SGF format of column x string then row y string
 	return ptIN.x + sgfPtY
 }
 
 // If game point format is x-axis int, y-axis int
-func transPointToSGF04(ptIN gamePointStrct04) string {
+func transPointToSGF04(ptIN intPointStrct01) string {
 	sgfPtX := string(rune((ptIN.x) + 97))
 	sgfPtY := string(rune((ptIN.y) + 97))
 	return sgfPtX + sgfPtY
@@ -54,20 +54,20 @@ func transPointToSGF04(ptIN gamePointStrct04) string {
 ### SGF to Point
 */
 // If game point format is x-axis string, y-axis int
-func transSGFToPoint03(sgfPt string) gamePointStrct03 {
+func transSGFToPoint03(sgfPt string) sgfPointStrct01 {
 	sgfPtX := string(sgfPt[0])
 	sgfPtY := sgfPt[1]
-	return gamePointStrct03{
+	return sgfPointStrct01{
 		x: sgfPtX,
 		y: int(sgfPtY) - 97,
 	}
 }
 
 // If game point format is x-axis int, y-axis int
-func transSGFToPoint04(sgfPt string) gamePointStrct04 {
+func transSGFToPoint04(sgfPt string) intPointStrct01 {
 	sgfPtX := sgfPt[0]
 	sgfPtY := sgfPt[1]
-	return gamePointStrct04{
+	return intPointStrct01{
 		x: int(sgfPtX) - 97,
 		y: int(sgfPtY) - 97,
 	}
@@ -80,7 +80,7 @@ func testMethods03() {
 	fmt.Println("Results: ")
 
 	// Test if game point format is x-axis string, y-axis int
-	gamePoint01 := gamePointStrct03{
+	gamePoint01 := sgfPointStrct01{
 		x: "q",
 		y: 23,
 	}
@@ -89,7 +89,7 @@ func testMethods03() {
 		gamePoint01, transPointToSGF03(gamePoint01))
 
 	// Test if game point format is x-axis int, y-axis int
-	gamePoint02 := gamePointStrct04{
+	gamePoint02 := intPointStrct01{
 		x: 16,
 		y: 23,
 	}
