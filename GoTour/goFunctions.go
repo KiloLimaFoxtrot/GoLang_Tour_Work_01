@@ -53,11 +53,11 @@ func main() {
 		They can harm readability in longer functions
 	*/
 
-	//fmt.Println(split1(18))
+	// fmt.Println(split1(18))
 	fmt.Print("split1 results: ")
 	fmt.Println(split1(18))
 
-	//alternatively, instantiate the variables ahead of time
+	// alternatively, instantiate the variables ahead of time
 	c, d = split2(18)
 	fmt.Print("split2 results: ")
 	fmt.Println(c, d)
@@ -90,9 +90,9 @@ func split2(sum int) (x, y int) {
 func split3(intSumIn int) (x, y, z int) {
 	x = (intSumIn * 2) / 8
 	y = intSumIn - (x / 2)
-	//y = (intSumIn * 4) % 4
+	// y = (intSumIn * 4) % 4
 	z = intSumIn - y
-	//z = (intSumIn * 6) % 4
+	// z = (intSumIn * 6) % 4
 
 	return
 }
@@ -103,30 +103,30 @@ A function can return any number of results..
 E.g. the 'swap' function below returns two strings
 */
 
-//1.
-//'(string, string)' are the return types, unlike Java,
+// 1.
+// '(string, string)' are the return types, unlike Java,
 // placed after function parameters
 func swap(x, y string) (string, string) {
 
-	//Change order of element return
-	//return x, y
+	// Change order of element return
+	// return x, y
 	return y, x
 }
 
-//2.
+// 2.
 //
 func swap2(x, y, z int) (int, int, int) {
-	//return x, y, z
-	//return x, z, y
+	// return x, y, z
+	// return x, z, y
 	return y, x, z
 }
 
-//Addition Long version
+// Addition Long version
 func add1(x int, y int) int {
 	return x + y
 }
 
-//Addition Shorter version
+// Addition Shorter version
 // '(int)' is the return type
 func add2(x, y int) int {
 	return x + y

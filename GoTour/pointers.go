@@ -50,43 +50,43 @@ func pointer01() {
 
 	i, j := 42, 2701
 
-	//the & operator generates a pointer to its operand,
-	//here i's memory address (?),
-	//and we are assigning that operator to the variable p
+	// the & operator generates a pointer to its operand,
+	// here i's memory address (?),
+	// and we are assigning that operator to the variable p
 
-	//i.e. &i is read as, point to i
-	//(and then we assign that point-ing to p?)
+	// i.e. &i is read as, point to i
+	// (and then we assign that point-ing to p?)
 	p := &i
 
-	//my test
+	// my test
 	q := &j
 
-	//Test prints
+	// Test prints
 	fmt.Printf("Variable i type: %T, value: %v \n", i, i)
 	fmt.Printf("Variable j type: %T, value: %v \n", j, j)
 
 	fmt.Println()
-	//the below prints out p's type: a pointer to a int value,
-	//and p's current value: a memory address (
-	//presumably for the int value)
+	// the below prints out p's type: a pointer to a int value,
+	// and p's current value: a memory address (
+	// presumably for the int value)
 	fmt.Printf("Pointer p type: %T, value: %v \n", p, p)
 
-	//the below prints out q's type: a pointer to a int value,
-	//and q's current value: a memory address (
-	//presumably for the int value)
+	// the below prints out q's type: a pointer to a int value,
+	// and q's current value: a memory address (
+	// presumably for the int value)
 	fmt.Printf("Pointer q type: %T, value: %v \n", q, q)
 
-	//the * operator denotes the pointer's underlying value (
-	//stored in the memory address?)
-	//*p is read as, read i through the pointer p
+	// the * operator denotes the pointer's underlying value (
+	// stored in the memory address?)
+	// *p is read as, read i through the pointer p
 	fmt.Println()
 	fmt.Printf("*p value: %v \n", *p)
 	fmt.Println(" (*p is read as, read i through the pointer p)")
 	fmt.Printf("*p type: %T, *p value %v \n", *p, *p)
 
-	//from above, q := &j, &j is read as, point to j,
-	//ie q is set to point to j...
-	//*q is read as, read j through the pointer q
+	// from above, q := &j, &j is read as, point to j,
+	// ie q is set to point to j...
+	// *q is read as, read j through the pointer q
 	fmt.Printf("*q value: %v \n", *q)
 	fmt.Println(" (*q is read as, read j through the pointer q)")
 	fmt.Printf("*q type: %T, *q value %v \n", *q, *q)
@@ -97,15 +97,15 @@ func pointer01() {
 	fmt.Println("*q = *q / 37 ")
 	fmt.Printf("j type: %T, j value: %v \n", j, j)
 
-	//my test...
-	//read as, set the value of i through the pointer p
+	// my test...
+	// read as, set the value of i through the pointer p
 	fmt.Println()
 	*p = 42 / 2
 	fmt.Println("*p = 42 / 2 ")
 	fmt.Println(" (set the value of i through the pointer p)")
 	fmt.Printf("i type: %T, i value: %v \n", i, i)
 
-	//read as, set the value of j through the pointer q
+	// read as, set the value of j through the pointer q
 	fmt.Println()
 	*q = 2701 / 2
 	fmt.Println("*q = 2701 / 2 ")

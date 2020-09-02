@@ -9,43 +9,43 @@ import (
 *** FIELDS
  */
 
-//Notes:
-//I. Creating variables
-//A. var 'instantiation' statement to declare a list of variables,
-//or
-//B. var'instantiation' individually ( like with Java or python)
+// Notes:
+// I. Creating variables
+// A. var 'instantiation' statement to declare a list of variables,
+// or
+// B. var'instantiation' individually ( like with Java or python)
 
-//II. Can declare/instantiate variables at the package (
-//ie like at the class field level of a java file) or at the
-//function level,
+// II. Can declare/instantiate variables at the package (
+// ie like at the class field level of a java file) or at the
+// function level,
 
-//Examples:
-//IA. var 'instantiation' statement, at package/field level
-//uses a variable list
+// Examples:
+// IA. var 'instantiation' statement, at package/field level
+// uses a variable list
 var (
-	//instantiated, but non-initialized
-	i               int  //default value is 0
-	c, python, java bool //default value is false?
+	// instantiated, but non-initialized
+	i               int  // default value is 0
+	c, python, java bool // default value is false?
 
-	//instantiated, and initialized
-	//1. Can omit the data type if we have an initializer value
+	// instantiated, and initialized
+	// 1. Can omit the data type if we have an initializer value
 	j, k, l, str1 = /*type*/ 1, 2, false, "str1 String!"
 
-	//2. Or can use the data type, eg bool, uint64 etc..
+	// 2. Or can use the data type, eg bool, uint64 etc..
 	ToBe bool = false
 )
 
-//IB.var 'instantiation' individually, at package/field level
-//omiting data type
+// IB.var 'instantiation' individually, at package/field level
+// omiting data type
 var typeOmmtd = 20
 
-//using data type
+// using data type
 var MaxInt uint64 = 1<<64 - 1
 var z complex128 = cmplx.Sqrt(-5 + 12i)
 
-//Default variables examples
-//variables declared without an explicit initial value are
-//given their zero/default value
+// Default variables examples
+// variables declared without an explicit initial value are
+// given their zero/default value
 
 //	numeric types: 0
 //	boolean types: false
@@ -73,7 +73,7 @@ func main() {
 *** FUNCTIONS
  */
 
-//declaring variable types in parameter field of function
+// declaring variable types in parameter field of function
 func zeroValues01(theInt1 int, theFlt1 float64, theBol1 bool,
 	theStr2 string) {
 
@@ -86,10 +86,10 @@ func zeroValues01(theInt1 int, theFlt1 float64, theBol1 bool,
 	fmt.Printf("Default value for %T = %v", theInt1, theInt1)
 	fmt.Printf("\nDefault value for %T = %v", theFlt1, theFlt1)
 	fmt.Printf("\nDefault value for %T = %v", theBol1, theBol1)
-	//%q ?? used below
+	// %q ?? used below
 	fmt.Printf("\nDefault value for %T = %q\n", theStr2, theStr2)
 
-	//or
+	// or
 	fmt.Println("\nVariables' default values single print" +
 		" statement 02:")
 	fmt.Printf("%v %v %v %q\n", theInt1, theFlt1, theBol1, theStr2)
@@ -97,7 +97,7 @@ func zeroValues01(theInt1 int, theFlt1 float64, theBol1 bool,
 }
 
 func basicTypes02() {
-	//basic variable data types
+	// basic variable data types
 	/*
 		bool
 		string
@@ -146,27 +146,27 @@ func basicTypes02() {
 
 func basicTypes01() {
 
-	//var statement to declare a list of variables at function level,
-	//var i int //default value is 0
+	// var statement to declare a list of variables at function level,
+	// var i int //default value is 0
 
-	//Printing the variables
+	// Printing the variables
 	fmt.Println(i, c, python, java)
 
-	//variables and initializers
-	//If an initializer is present,
-	//we can omit the variable data type such as integer because
-	//the GoLang will use the type of the initializer
+	// variables and initializers
+	// If an initializer is present,
+	// we can omit the variable data type such as integer because
+	// the GoLang will use the type of the initializer
 
-	//var j, k, l, str1 = 1, 2, false, "str1 String!"
+	// var j, k, l, str1 = 1, 2, false, "str1 String!"
 	fmt.Println(j, k, l, str1)
 
-	//Short variable declarations
-	//Inside a function,
-	//the ':=' short assignment statement can be used in place of a
-	//var declaration with implicit type
+	// Short variable declarations
+	// Inside a function,
+	// the ':=' short assignment statement can be used in place of a
+	// var declaration with implicit type
 
-	//Outside a function, every statement begins with a keyword (
-	//var, func, and so on) and so the ':=' construct is not possible
+	// Outside a function, every statement begins with a keyword (
+	// var, func, and so on) and so the ':=' construct is not possible
 
 	var i2, j2 int = 1, 2
 	k2 := 3
