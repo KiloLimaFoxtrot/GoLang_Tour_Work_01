@@ -14,9 +14,9 @@ func main() {
 	fmt.Println("Random Num Post-Seed 01: ", rand.Intn(30))
 	rand.Seed(16)
 	fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
-	fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
-	fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
-	fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
+	// fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
+	// fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
+	// fmt.Println("Random Num Post-Seed 02: ", rand.Intn(30))
 	fmt.Println("Time End: [", time.Now(), "] ")
 
 	x := 2

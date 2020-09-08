@@ -1,4 +1,12 @@
 
+-Flags
+    -program incorporation, arguments passed to the program,
+    - standard in, standard out, standard error where error and log
+    messages
+    -2>error.txt ??
+
+- Go error handling, look at parser..
+
 - methods01.go
 1. GoLang Methods are sort of like the GoLang version of Objects, which
 in Java terms have both state and behavior, ie states / field values
@@ -15,7 +23,7 @@ solution examples found below
 - Function that receives both
 1. arguments from another function
 "fn03 func(float64, float64) float64"
-    [func name] [func and its parameters    [the return data type]
+    [func name] [func and its parameters]    [the return data type]
     "fn03       func(float64, float64)      float64"
 
 2. values to plug into the arguments
