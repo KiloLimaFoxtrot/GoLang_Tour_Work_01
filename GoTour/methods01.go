@@ -52,6 +52,8 @@ func (fIn MyFloat01) Abs03() float64 {
 	// returns the negative of that to get the absolute value
 	if fIn < 0 {
 		return float64(-fIn)
+	} else {
+		return float64(fIn)
 	}
 }
 
