@@ -24,6 +24,10 @@ func main() {
 	fmt.Println(add1(x, y))
 	fmt.Println(add2(x, y))
 
+	// Test change
+	fmt.Println()
+	fmt.Println("Test change for git commit and push")
+
 	/*
 		Multiple Results:
 		We can create a swap function that will allow us to control the
