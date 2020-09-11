@@ -26,7 +26,7 @@ func main() {
 
 	// Test change
 	fmt.Println()
-	fmt.Println("Test change for git commit and push")
+	fmt.Println("Test change for git commit and push, again")
 
 	/*
 		Multiple Results:
