@@ -32,7 +32,7 @@ func arrays01() {
 	fmt.Printf("arry01[0]: %v, arry01[1]: %v \n", arry01[0], arry01[1])
 	fmt.Printf("arry01: %v \n", arry01)
 
-	primesArry := [6]int{2, 3, 5, 7, 11, 15}
+	primesArry := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println()
 	fmt.Printf("primesArry %v \n", primesArry)
 
