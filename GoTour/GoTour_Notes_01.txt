@@ -5,13 +5,26 @@
     messages
     -2>error.txt ??
 
-- Go error handling, look at parser..
+- Go error handling, look at parser..??
 
-- methods01.go
-1. GoLang Methods are sort of like the GoLang version of Objects, which
-in Java terms have both state and behavior, ie states / field values
-that can be both get and set, and behavior / methods that can be called
-on the object
+-Receivers and Pointer Receivers
+    - methods01.go
+    1. GoLang Methods (with Pointer Receivers) are sort of like the
+    GoLang version of Objects, which in Java terms have both state and
+    behavior, ie states / field values that can be both get and set, and
+    behavior / methods that can be called on the object
+        - In GoLang, you can declare methods with pointer receivers
+        - This means the method receiver type will have the literal
+        syntax *T for some type T. (Also, T cannot itself be a pointer
+        such as *int.)
+
+          For example, the Scale method in methods01.go is defined on
+          *Vertex.
+
+          Methods with pointer receivers can modify the value to which
+          the receiver points (as Scale does in methods01.go). Since
+          methods often need to modify their receiver, pointer receivers
+          are more common than value receivers.
 
 - Exercise04 Fibonacci Closures exercise04_Fibonacci_Closure.go
 1. The func fibonacci01() and func fibonacci02() my test reference
