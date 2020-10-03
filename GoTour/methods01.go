@@ -5,6 +5,35 @@ import (
 	"math"
 )
 
+type VrtxStrct01 struct {
+	X, Y float64
+}
+
+func main() {
+	fmt.Println()
+	fmt.Println("**** Methods 01:")
+
+	v01 := VrtxStrct01{
+		X: 3,
+		Y: 4,
+	}
+
+	// Here is a function Abs01(
+	// ) 'on' the data type VrtxStrct01 variable instance v01
+	v1AbsVal := v01.Abs01()
+	fmt.Println()
+	fmt.Println("Method on variable assigned to v1AbsVal: ", v1AbsVal)
+
+	// condensed version of just above,
+	// removes the variable initialization
+	fmt.Println()
+	fmt.Println("Method on variable - v01.Abs01(): ", v01.Abs01())
+
+	fmt.Println()
+	fmt.Println("Basic function - Abs02(v01): ", Abs02(v01))
+
+}
+
 /*
 
 Methods
@@ -20,10 +49,6 @@ keyword and the method name.
 In this example, the Abs01 method has a receiver of type Vertex named v.
 
 */
-
-type VrtxStrct01 struct {
-	X, Y float64
-}
 
 // Declaring a method (ie a function with a receiver argument) on a
 // struct type
@@ -54,32 +79,7 @@ func (fIn MyFloat01) Abs03() float64 {
 	// returns the negative of that to get the absolute value
 	if fIn < 0 {
 		return float64(-fIn)
-	} else {
-		return float64(fIn)
 	}
-}
-
-func main() {
-	fmt.Println()
-	fmt.Println("**** Methods 01:")
-
-	v01 := VrtxStrct01{
-		X: 3,
-		Y: 4,
-	}
-
-	// Here is a function Abs01(
-	// ) 'on' the data type VrtxStrct01 variable instance v01
-	v1AbsVal := v01.Abs01()
-	fmt.Println()
-	fmt.Println("Method on variable assigned to v1AbsVal: ", v1AbsVal)
-
-	// condensed version of just above,
-	// removes the variable initialization
-	fmt.Println()
-	fmt.Println("Method on variable - v01.Abs01(): ", v01.Abs01())
-
-	fmt.Println()
-	fmt.Println("Basic function - Abs02(v01): ", Abs02(v01))
+	return float64(fIn)
 
 }
