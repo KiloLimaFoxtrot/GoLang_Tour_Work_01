@@ -27,7 +27,9 @@ type VrtxStrct01 struct {
 
 // Declaring a method (ie a function with a receiver argument) on a
 // struct type
-// Function receiver argument: v1 VrtxStrct01 (A
+// Function receiver argument: v1 VrtxStrct01
+// 	(A receiver argument needs to be defined in the same scope as the
+// method.)
 // Function name: Abs()
 // Function return data type: float64
 // -This type of function, a method,
