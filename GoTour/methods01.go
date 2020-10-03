@@ -9,6 +9,9 @@ type VrtxStrct01 struct {
 	X, Y float64
 }
 
+// used with Abs03 below
+type MyFloat64_01 float64
+
 func main() {
 	fmt.Println()
 	fmt.Println("**** Methods 01:")
@@ -29,8 +32,20 @@ func main() {
 	fmt.Println()
 	fmt.Println("Method on variable - v01.Abs01(): ", v01.Abs01())
 
+	// same function as above, but without the receiver argument
 	fmt.Println()
 	fmt.Println("Basic function - Abs02(v01): ", Abs02(v01))
+
+	fmt.Println()
+	fmt.Println("Simple get absolute value method (" +
+		"ie a function with a receiver method): ")
+	flt02 := MyFloat64_01(20)
+	flt03 := math.Sqrt(81)
+	fmt.Println("flt02.Abs03(-20): ", flt02.Abs03())
+	fmt.Println("MyFloat64_01(flt03).Abs03(): ",
+		MyFloat64_01(flt03).Abs03())
+	fmt.Println("MyFloat64_01(-flt03).Abs03(): ",
+		MyFloat64_01(-flt03).Abs03())
 
 }
 
@@ -60,6 +75,7 @@ In this example, the Abs01 method has a receiver of type Vertex named v.
 // -This type of function, a method,
 // puts the function 'on' the receiving data type's variable instance,
 // see below v1.Abs01()
+
 func (vIn VrtxStrct01) Abs01() float64 {
 	absVal := math.Sqrt(vIn.X*vIn.X + vIn.Y*vIn.Y)
 	return absVal
@@ -72,9 +88,8 @@ func Abs02(vIn VrtxStrct01) float64 {
 
 // Simple get absolute value method
 // declaring method on non-struct type
-type MyFloat01 float64
 
-func (fIn MyFloat01) Abs03() float64 {
+func (fIn MyFloat64_01) Abs03() float64 {
 	// This checks to see if fIn is negative, and if so,
 	// returns the negative of that to get the absolute value
 	if fIn < 0 {
