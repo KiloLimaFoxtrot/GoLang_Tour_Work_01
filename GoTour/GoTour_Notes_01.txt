@@ -24,7 +24,56 @@
           Methods with pointer receivers can modify the value to which
           the receiver points (as Scale does in methods01.go). Since
           methods often need to modify their receiver, pointer receivers
-           are more common than value receivers.
+          are more common than value receivers.
+    2. functions with a pointer argument must take a pointer:
+
+       var v Vertex
+       ScaleFunc(v, 5)  // Compile error!
+       ScaleFunc(&v, 5) // OK
+
+       while methods with pointer receivers take either a value or a pointer as the receiver when they are called:
+
+       var v Vertex
+       v.Scale(5)  // OK
+       p := &v
+       p.Scale(10) // OK
+
+       -For the statement v.Scale(5), even though v is a value and not a
+        pointer, the method with the pointer receiver is called
+        automatically.
+       -That is, as a convenience, Go interprets the statement v.Scale
+       (5) as (&v).Scale(5) since the Scale method has a pointer
+       receiver.
+
+    3.  The equivalent thing happens in the reverse direction.
+
+       Functions that take a value argument must take a value of that
+       specific type:
+
+       var v Vertex
+       fmt.Println(AbsFunc(v))  // OK
+       fmt.Println(AbsFunc(&v)) // Compile error!
+
+       while methods with value receivers take either a value or a
+       pointer as the receiver when they are called:
+
+       var v Vertex
+       fmt.Println(v.Abs()) // OK
+       p := &v
+       fmt.Println(p.Abs()) // OK
+
+       In this case, the method call p.Abs() is interpreted as (*p).Abs
+       ().
+
+   * Hence, for efficiency, if you want to change the original value of
+   a variable passed to a function/method, ie modify the value to which
+   a receiver points, which will avoid copying the value on each method
+   call..
+    MAKE ALL FUNCTIONS INTO METHODS WITH RECEIVER ARGUMENTS THAT TAKE
+    POINTER RECEIVERS
+        - That way, you can pass either values or pointers to the method
+
+
 
 - Exercise04 Fibonacci Closures exercise04_Fibonacci_Closure.go
 1. The func fibonacci01() and func fibonacci02() my test reference

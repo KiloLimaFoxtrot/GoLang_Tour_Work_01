@@ -51,7 +51,7 @@ func main() {
 	scaleVal := float64(10)
 
 	fmt.Println()
-	fmt.Println("ScaleNP function with non-Pointer Receiver")
+	fmt.Println("ScaleNP method with non-Pointer Receiver")
 	v02 := VrtxStrct01{
 		3,
 		4,
@@ -61,7 +61,7 @@ func main() {
 	fmt.Println("v02.Abs01(): ", v02.Abs01())
 
 	fmt.Println()
-	fmt.Println("ScaleNP function With Pointer Receiver")
+	fmt.Println("ScaleWP method With Pointer Receiver")
 	v03 := VrtxStrct01{
 		3,
 		4,
@@ -69,6 +69,23 @@ func main() {
 	v03.ScaleWP(scaleVal)
 	fmt.Println("v03.ScaleWP(scaleVal)")
 	fmt.Println("v03.Abs01(): ", v03.Abs01())
+
+	fmt.Println()
+	fmt.Println("ScaleFunc function with Pointer parameter/argument" +
+		" passed in")
+	v04 := VrtxStrct01{
+		3,
+		4,
+	}
+	// original v04 values
+	fmt.Println("v04.Abs01() before scale: ", v04.Abs01())
+	// like other scale functions above,
+	// this points to a vertex struct, and passes a scale value in,
+	// to change the original value of the struct by the scale value
+	ScaleFunc(&v04, scaleVal)
+	// ScaleFunc(v04, scaleVal) // error if no pointer is passed
+	fmt.Println("v04.ScaleWP(scaleVal)")
+	fmt.Println("v04.Abs01() after scale: ", v04.Abs01())
 
 }
 
@@ -99,8 +116,8 @@ In this example, the Abs01 method has a receiver of type Vertex named v.
 // puts the function 'on' the receiving data type's variable instance,
 // see below v1.Abs01()
 
-func (vIn VrtxStrct01) Abs01() float64 {
-	absVal := math.Sqrt(vIn.X*vIn.X + vIn.Y*vIn.Y)
+func (vrtx VrtxStrct01) Abs01() float64 {
+	absVal := math.Sqrt(vrtx.X*vrtx.X + vrtx.Y*vrtx.Y)
 	return absVal
 }
 
@@ -124,14 +141,20 @@ func (fIn MyFloat64_01) Abs03() float64 {
 
 // ScaleNP function with non-Pointer Receiver.
 // Will not change vrtx01's value??
-func (vrtx01 VrtxStrct01) ScaleNP(f float64) {
-	vrtx01.X = vrtx01.X * f
-	vrtx01.Y = vrtx01.Y * f
+func (vrtx VrtxStrct01) ScaleNP(f float64) {
+	vrtx.X = vrtx.X * f
+	vrtx.Y = vrtx.Y * f
 }
 
 // ScaleNP function with non-Pointer Receiver
-func (vrtx01 *VrtxStrct01) ScaleWP(f float64) {
-	vrtx01.X = vrtx01.X * f
-	vrtx01.Y = vrtx01.Y * f
+func (vrtx *VrtxStrct01) ScaleWP(f float64) {
+	vrtx.X = vrtx.X * f
+	vrtx.Y = vrtx.Y * f
 
+}
+
+// ScaleFunc is a normal function, no receiver argument
+func ScaleFunc(vrtx *VrtxStrct01, f float64) {
+	vrtx.X = vrtx.X * f
+	vrtx.Y = vrtx.Y * f
 }
