@@ -27,7 +27,7 @@ type VrtxStrct01 struct {
 
 // Declaring a method (ie a function with a receiver argument) on a
 // struct type
-// Function reciever argument: v1 VrtxStrct01
+// Function receiver argument: v1 VrtxStrct01
 // Function name: Abs()
 // Function return data type: float64
 // -This type of function, a method,
@@ -60,24 +60,24 @@ func (fIn MyFloat01) Abs03() float64 {
 func main() {
 	fmt.Println()
 	fmt.Println("**** Methods 01:")
-	
+
 	v01 := VrtxStrct01{
 		X: 3,
 		Y: 4,
 	}
-	
+
 	// Here is a function Abs01(
 	// ) 'on' the data type VrtxStrct01 variable instance v01
 	v1AbsVal := v01.Abs01()
 	fmt.Println()
 	fmt.Println("Method on variable assigned to v1AbsVal: ", v1AbsVal)
-	
+
 	// condensed version of just above,
 	// removes the variable initialization
 	fmt.Println()
 	fmt.Println("Method on variable - v01.Abs01(): ", v01.Abs01())
-	
+
 	fmt.Println()
 	fmt.Println("Basic function - Abs02(v01): ", Abs02(v01))
-	
+
 }
