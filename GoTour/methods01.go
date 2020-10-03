@@ -47,6 +47,29 @@ func main() {
 	fmt.Println("MyFloat64_01(-flt03).Abs03(): ",
 		MyFloat64_01(-flt03).Abs03())
 
+	// Methods with Pointer Receivers
+	scaleVal := float64(10)
+
+	fmt.Println()
+	fmt.Println("ScaleNP function with non-Pointer Receiver")
+	v02 := VrtxStrct01{
+		3,
+		4,
+	}
+	v02.ScaleNP(scaleVal)
+	fmt.Println("v02.ScaleNP(scaleVal) ")
+	fmt.Println("v02.Abs01(): ", v02.Abs01())
+
+	fmt.Println()
+	fmt.Println("ScaleNP function With Pointer Receiver")
+	v03 := VrtxStrct01{
+		3,
+		4,
+	}
+	v03.ScaleWP(scaleVal)
+	fmt.Println("v03.ScaleWP(scaleVal)")
+	fmt.Println("v03.Abs01(): ", v03.Abs01())
+
 }
 
 /*
@@ -96,5 +119,19 @@ func (fIn MyFloat64_01) Abs03() float64 {
 		return float64(-fIn)
 	}
 	return float64(fIn)
+
+}
+
+// ScaleNP function with non-Pointer Receiver.
+// Will not change vrtx01's value??
+func (vrtx01 VrtxStrct01) ScaleNP(f float64) {
+	vrtx01.X = vrtx01.X * f
+	vrtx01.Y = vrtx01.Y * f
+}
+
+// ScaleNP function with non-Pointer Receiver
+func (vrtx01 *VrtxStrct01) ScaleWP(f float64) {
+	vrtx01.X = vrtx01.X * f
+	vrtx01.Y = vrtx01.Y * f
 
 }

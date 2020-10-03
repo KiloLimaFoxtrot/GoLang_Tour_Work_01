@@ -24,7 +24,7 @@
           Methods with pointer receivers can modify the value to which
           the receiver points (as Scale does in methods01.go). Since
           methods often need to modify their receiver, pointer receivers
-          are more common than value receivers.
+           are more common than value receivers.
 
 - Exercise04 Fibonacci Closures exercise04_Fibonacci_Closure.go
 1. The func fibonacci01() and func fibonacci02() my test reference
