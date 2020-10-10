@@ -98,7 +98,7 @@ Go does not have classes. However, you can define methods on types.
 A method is a function with a special receiver argument,
 (? ie like an incoming parameter profile?)
 
-The receiver appears in its own argument list between the func
+**The receiver appears in its own argument list between the func
 keyword and the method name.
 
 In this example, the Abs01 method has a receiver of type Vertex named v.
@@ -139,21 +139,22 @@ func (fIn MyFloat64_01) Abs03() float64 {
 
 }
 
-// ScaleNP function with non-Pointer Receiver.
+// ScaleNP function with non-Pointer Receiver VrtxStrct01
 // Will not change vrtx01's value??
 func (vrtx VrtxStrct01) ScaleNP(f float64) {
 	vrtx.X = vrtx.X * f
 	vrtx.Y = vrtx.Y * f
 }
 
-// ScaleNP function with non-Pointer Receiver
+// ScaleNP function with Pointer Receiver *VrtxStrct01
 func (vrtx *VrtxStrct01) ScaleWP(f float64) {
 	vrtx.X = vrtx.X * f
 	vrtx.Y = vrtx.Y * f
 
 }
 
-// ScaleFunc is a normal function, no receiver argument
+// ScaleFunc is a normal function that receives a pointer receiver
+// *VrtxStrct01, no receiver argument
 func ScaleFunc(vrtx *VrtxStrct01, f float64) {
 	vrtx.X = vrtx.X * f
 	vrtx.Y = vrtx.Y * f
